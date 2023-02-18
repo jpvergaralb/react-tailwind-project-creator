@@ -1,4 +1,4 @@
-### Create a React + Tailwind + TailwindPrettier with 1 line
+### Create a React + Tailwind + TailwindPrettier
 
 ##### How to run it
 ```sh
