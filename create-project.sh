@@ -65,4 +65,4 @@ function App() {
 export default App;
 EOF
 
-echo "Listo, ya puedes iniciar el proyecto con npm run start"
+echo "Entra en tu proyecto con el comando: cd $project_name y ejecuta el comando: npm run start" 
