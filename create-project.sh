@@ -1,24 +1,24 @@
 #!/bin/bash
 
-# Pide el nombre del proyecto
+# Se pide el nombre del proyecto
 read -p "Ingresa el nombre del proyecto: " project_name
 
-# Crea el proyecto con create-react-app
+# Se crea el proyecto con create-react-app
 npx create-react-app@latest "$project_name" 
 
-# Cambia al directorio del proyecto
+# Cambiamos al directorio del proyecto
 cd "$project_name"
 
-# Instala tailwindcss como dependencia de desarrollo
+# Instalamos tailwindcss como dependencia de desarrollo
 npm install -D tailwindcss
 
-# Inicializa el archivo de configuración de TailwindCSS
+# Inicializamos el archivo de configuración de TailwindCSS
 npx tailwindcss init
 
-# Instala prettier y prettier-plugin-tailwindcss como dependencia de desarrollo
+# Instalamos prettier y prettier-plugin-tailwindcss como dependencia de desarrollo
 npm install -D prettier prettier-plugin-tailwindcss
 
-# Modifica el archivo tailwind.config.js
+# Modificamos el archivo tailwind.config.js
 cat << 'EOF' > tailwind.config.js
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -40,7 +40,7 @@ module.exports = {
 }
 EOF
 
-# Modifica el archivo index.css
+# Modificamos el archivo index.css
 cat << 'EOF' > src/index.css
 @tailwind base;
 @tailwind components;
@@ -52,7 +52,7 @@ cat << 'EOF' > src/index.css
 
 EOF
 
-# Modifica el archivo src/App.js
+# Modificamos el archivo src/App.js
 cat << 'EOF' > src/App.js
 function App() {
   return (
@@ -65,4 +65,5 @@ function App() {
 export default App;
 EOF
 
+# Ready
 echo "Entra en tu proyecto con el comando: cd $project_name y ejecuta el comando: npm run start" 
